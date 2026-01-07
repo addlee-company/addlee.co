@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Addlee — Welcome</title>
+  <meta name="description" content="Addlee Company — Example homepage" />
+  <style>
+    :root{--accent:#0070f3;--bg:#f7f8fa;--text:#0f1720}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased}
+    header{background:#fff;border-bottom:1px solid #e6e6e6}
+    .container{max-width:1000px;margin:0 auto;padding:1rem}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700;color:var(--accent);letter-spacing:.4px}
+    .hero{padding:4rem 1rem;text-align:center}
+    .hero h1{margin:0 0 .5rem;font-size:clamp(1.5rem,4vw,2.25rem)}
+    .hero p{margin:0 0 1.25rem;color:#374151}
+    .buttons{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:600}
+    .muted{background:transparent;border:1px solid #d1d5db;color:#374151;padding:.5rem .9rem;border-radius:8px;text-decoration:none}
+    section.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2rem 0}
+    .card{background:#fff;padding:1rem;border-radius:10px;border:1px solid #e6e6e6}
+    footer{padding:1rem 0;text-align:center;color:#6b7280;font-size:.9rem}
+    @media (min-width:700px){ .hero{padding:6rem 1rem} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Addlee</div>
+        <div>
+          <a class="muted" href="#">Docs</a>
+          <a class="muted" href="#" style="margin-left:.5rem">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <h1>Welcome to Addlee</h1>
+        <p>A simple static site to represent your project. Replace this text with your content, products, or portfolio.</p>
+        <div class="buttons">
+          <a class="btn" href="#">Get started</a>
+          <a class="muted" href="#">Learn more</a>
+        </div>
+      </section>
+
+      <section class="features" aria-label="features">
+        <div class="card">
+          <h3>Fast</h3>
+          <p>Optimized for performance and quick loading.</p>
+        </div>
+        <div class="card">
+          <h3>Responsive</h3>
+          <p>Works on mobile, tablet, and desktop out of the box.</p>
+        </div>
+        <div class="card">
+          <h3>Easy to edit</h3>
+          <p>Simple HTML + CSS you can modify directly in the repo.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Addlee Company — Made with care</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
