@@ -1,5 +1,4 @@
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
+addlee.co/
+├── vercel.json     ← Right here (same level as index.html)
+├── index.html
+└── Addlee (if this is a file/folder)
