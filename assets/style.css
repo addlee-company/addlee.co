@@ -1,0 +1,20 @@
+:root{
+  --bg:#f6f8fb;
+  --card:#fff;
+  --accent:#0b6efd;
+  --text:#0b1a2b;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:var(--text);}
+.site-header{background:var(--card);border-bottom:1px solid #e6eef9}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;max-width:1000px;margin:0 auto}
+.logo{font-weight:700;color:var(--accent);text-decoration:none}
+.nav{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+.nav a{text-decoration:none;color:inherit}
+.container{max-width:900px;margin:4rem auto;padding:1rem}
+.lead{color:#374151}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:0.6rem 1rem;border-radius:6px;text-decoration:none;border:0}
+.site-footer{text-align:center;padding:2rem 0;color:#6b7280}
+input,textarea{width:100%;padding:0.6rem;border:1px solid #d1e3ff;border-radius:6px;margin-bottom:0.75rem}
+label{display:block;margin-bottom:0.25rem;font-weight:600}
+@media(min-width:700px){.container{margin-top:6rem}}

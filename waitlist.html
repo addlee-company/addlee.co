@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Join Waitlist — Addlee</title>
+    <link rel="stylesheet" href="/assets/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav>
+        <a class="logo" href="/">Addlee</a>
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/waitlist.html">Join Waitlist</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Join our Waitlist</h1>
+      <p>Sign up to get early access to Addlee.</p>
+      <form id="waitlist-form" action="#" onsubmit="handleWaitlist(event)">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <button type="submit" class="cta">Join Waitlist</button>
+      </form>
+
+      <div id="waitlist-message" aria-live="polite"></div>
+    </main>
+
+    <script>
+      function handleWaitlist(e) {
+        e.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        // For now just store locally and show a message. Integrate with a backend later.
+        var entries = JSON.parse(localStorage.getItem('addlee_waitlist') || '[]');
+        entries.push({ name: name, email: email, created: new Date().toISOString() });
+        localStorage.setItem('addlee_waitlist', JSON.stringify(entries));
+        document.getElementById('waitlist-message').textContent = 'Thanks — you\'re on the waitlist!';
+        document.getElementById('waitlist-form').reset();
+      }
+    </script>
+
+    <footer class="site-footer">
+      <p>&copy; Addlee</p>
+    </footer>
+  </body>
+</html>
